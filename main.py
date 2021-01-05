@@ -1,5 +1,6 @@
 import time
 import random
+from datetime import datetime
 
 import tweepy
 
@@ -19,7 +20,7 @@ print(f'{len(entries)} Total Entries')
 
 for i in range(10):
   winner = random.choice(entries)
-  print(f'Winner Announced in: {10-i}', end=' \r')
+  print(f'[{datetime.now()}]: Winner Announced in: {10-i}', end=' \r')
   time.sleep(1)
 
 status = f'Congrats {winner} You will be DM\'d Shortly'
